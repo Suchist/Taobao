@@ -1,0 +1,897 @@
+/*
+划分结构的顺序
+自上往下，从左往右，以行为一个单位
+内容
+颜色块
+间距
+边框
+@charset 设置样式表的编码
+@import 导入其它样式文件
+@media 媒体查询 查询用户使用的媒体是手机还是电脑等等，得到屏幕的大小等国内
+@font-face 自定义字体  
+../定位到父级目录
+linehight:行高
+*/
+@import 'reset.css';
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('../font/iconfont.woff2') format('woff2'),
+      url('../font/iconfont.woff') format('woff'),
+      url('../font/iconfont.ttf') format('truetype'),
+      url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*上下为0 左右为auto*/
+.layer{
+	width:1190px;
+	margin:0 auto;
+}
+#head_index li{
+	float:left;
+	linehight:60px;
+	padding:0 6px;
+	font-size:0;
+}
+
+#head_index a{
+	color:#6c6c6c;
+	font-size:12px;
+}
+#head_index a:hover{
+	color:#f40;
+}
+#head_index a.login{
+	color:#f22e00;
+}
+#head_index span{
+	font-size:12px;
+}
+#head_index span.arrow{
+	font-size:5px;
+	margin-left:7px;
+}
+#head_index li strong{
+	font-size:12px;
+	color:#f22e00;
+}
+#head_index li span.store{
+	color:#9c9c9c;
+}
+#head_index li.line{
+	color:#ddd;
+	padding:0 5px;
+}
+#head_adv{
+    background-color:#f12f04;
+}
+#head_adv .go{
+	display:block;
+	padding:10px 10px 10px 15px;
+}
+#head_adv .go img{
+	width:80px;
+	height:80px;
+}
+#head_adv ul{		
+		margin-top:13px;
+}
+#head_adv li{
+		float:left;
+		width:209px;
+		height:75px;
+		margin-right:10px;
+		padding:12px 15px 0 15px;
+		box-sizing:border-box;
+}
+#head_adv li a{
+	 color:#fff;
+	 display:block;
+}
+#head_adv li a img{
+	width:52px;
+	height:52px;
+	border-radius:5px;
+}
+#head_adv li h3{
+	 font-size:20px;
+	 line-height:5px;
+}
+#head_adv li p{
+	 font-size:14px;
+	 line-height:5px;
+}
+#head_adv li.item1{
+		background-image:linear-gradient(to right,#7800e2,#d700f0);
+		
+		border-radius: 20px;
+}
+#head_adv li.item2{
+		background-image:linear-gradient(to right,#ff6000,#ffb82c);
+		border-radius: 20px;
+}
+#head_adv li.item3{
+	
+		background-image:linear-gradient(to right,#ff00d7,#ff66eb);
+		border-radius: 20px;
+}
+#head_adv li.item4{
+	
+		background-image:linear-gradient(to right,#0060fe,#00beff);
+		border-radius: 20px;
+}
+#head_adv li.item5{
+        background-image:linear-gradient(to right,#009537,#00d578);
+		border-radius: 20px;
+		margin-right:0;
+}
+#head_ser{
+      background-color:#fff;
+	  padding-top:10px;
+	  height:120px;
+}
+#head_ser h1 a{
+	display:block;
+	width:190px;
+	height:120px;
+    background:url(../images/taobaocom.gif) center no-repeat;
+    text-indent:-9999px;
+	overflow:hidden;
+	margin-top:-20px;
+}
+#head_ser  .code{
+	 width:72px;
+	 height:86px;
+	 border:1px solid #eee;
+	 margin-right:110px;
+	 text-align:center;
+	 position:relative;	 
+}
+#head_ser  .appcode{
+	 font-size:55px;
+	 color:#FF4400; 	 
+}
+#head_ser  .close{
+	 width:14px;
+	 height:14px;
+	 font-size:10px;
+	 line-height:14px;
+	 border:1px solid #eee;
+	 color:#ddd;
+	 cursor:pointer;
+     position:absolute;
+	 left:-16px;
+	 top:-1px;
+}
+#head_ser .serach{
+	/*居中*/
+	width:630px;
+	margin:0 auto;
+}
+#head_ser .serachT{
+	height:22px;
+	padding-left:17px;
+}
+#head_ser .serachT li{
+	float:left;
+	width:36px;
+	line-height:22px;
+    margin-right:10px;
+	text-align:center;
+	color:#f40;
+	cursor:pointer;
+}
+#head_ser .serachT li:hover{
+	background-color:#ffeee5;
+}
+#head_ser .serachT li.active{
+	background-image:linear-gradient(to right,#ff9000,#ff5000);
+	color:#fff;
+	font-weight:bold;
+	/*上 、右 圆角*/
+	border-radius:6px 6px 0 0;
+}
+#head_ser .serachContent{
+	height:40px;
+	position:relative;
+	top:-12px;
+}
+#head_ser .serachBox{
+	    width:554px;
+		height:40px;
+		box-sizing:border-box;
+		border:2px solid #ff5000;
+		border-right:none;
+		border-radius:20px 0 0 20px;
+		overflow:hidden;
+		position:relative;
+}
+#head_ser .serachBox input{
+	width:490px;
+	height:36px;
+	line-height:36px;
+	outline:none;
+	/*去边框*/
+	border:none;
+	text-indent:10px;
+	/*placeholder把input框覆盖了需要将input层向上调一层并且把input层设置为透明*/
+	position:absolute;
+	z-index:1;
+	background-color:transparent;	
+}
+
+#head_ser .serachBox .placeholder{
+	position:absolute;
+	top:6px;
+	left:16px;
+}
+#head_ser .placeholder span{
+	color:#9c9c9c;
+	vertical-align:1px;
+	/*向上1像素*/
+}
+#head_ser .imgSerach{
+	position:absolute;
+	right:20px;
+	top:-2px;
+	/*向上两像素*/
+	font-size:28px;
+	color:#9c9c9c;
+	cursor:pointer;
+}
+#head_ser button{
+	width:74px;
+	height:40px;
+	text-align:center;
+	font-size:18px;
+	line-height:40px;
+	color:#fff;
+	border:none;
+	background-image:linear-gradient(to right,#ff9000,#ff5000);
+	border-radius:0 20px 20px 0;
+}
+#head_ser .hotkey{
+	position:relative;
+	top:-6px;
+}
+#head_ser .hotkey a:hover{
+	color:#f50
+}
+#nav{
+	position:relative;
+	top:-13px;
+}
+
+/*导航栏*/
+#nav h2{
+	width:190px;
+	height:30px;
+	line-height:30px;
+	font-size:16px;
+	color:#fff;
+	text-align:center;
+	background-color:#f50;
+	position:relative;
+	top:-13px;
+}
+#nav ul{
+	/*width:1000px; 运算符中间要有空格 ie9+ width:calc(100% - 190px);*/
+	margin-left:190px;
+	height:30px;
+	font-size:16px;
+	color:#fff;
+	text-align:center;
+	background-image:linear-gradient(to right,#ff9000,#ff5000);
+}
+#nav ul li{
+    float:left;
+	line-height:30px;
+	margin:0 7px;
+	font-size:14px;
+	color:#fff;
+	font-size:14px;
+	position:relative;
+	padding:0 4px;
+}
+
+#nav ul li a{
+	color:#fff;
+	font-weight:bold;
+}
+#nav ul li .line{
+	margin:0;
+	padding:0;
+}
+/*鼠标经过导航栏的时候会有一个图片出现
+#nav ul li:hover:before{
+	width:23px;
+	height:13px;
+	background-image:url(../images/icon1.png);
+	top:-13px;
+	left:-50%;
+	content:'';
+}
+*/
+/*首屏内容*/
+#firstScreen{
+	position:relative;
+	top:-40px;
+
+}
+/*首屏左边内容*/
+.firstLeft{
+	width:900px;
+	height:522px;
+}
+.firstLeft .sidenav{
+	width:190px;
+	height:522px;
+	border:1px solid #ff5000;
+	background-color:#fff;
+	box-sizing:border-box;
+	border-top:none;
+    padding-bottom:10px;
+	
+	
+}
+.sidenav ul li{
+	height:32px;
+	line-height:32px;
+	font-size:13px;
+	text-align:center;
+	transition:background-color 0.3s;
+	
+}
+.sidenav ul li:hover{
+background:#ffe4dc;
+color:#f50;
+}
+.sidenav ul a:hover{
+text-decoration:underline;
+}
+.sidenav ul li:hover a{
+color:#f50;
+}
+.sidenav ul li:hover span{
+color:#f50;
+}
+.sidenav ul li a{
+	color:#666;
+}
+.sidenav .larrow{
+	font-size:10px;
+	color:#666;
+	margin-right:5px;
+}
+ .firstLeft .img1Box{
+	width:700px;
+	height:280px;
+	margin-top:5px;
+	background-color:#ccc;
+}
+.firstLeft .img1Box .pic{
+	width:520px;
+	height:280px;
+	position:relative;
+	
+}
+/*.firstLeft .img1Box .pic button 如果这样写的话这个按钮就不能通用了*/
+.firstLeft .pic button{
+	width:20px;
+	height:30px;
+	line-height:30px;
+	font-size:0;
+	background-color:rgba(0,0,0,0.3);
+/*opacity:0.5;整体透明 ie8不支持 rgba  用hack解决兼容问题
+background-color:#000\9 ie9以下的浏览器
+filter:alpha(opacity=30);设置透明度
+*/
+	border:none;
+	cursor:pointer;
+	color:#fff;	
+	position:absolute;
+	top:50%;
+	margin-top:-15px;
+	display:none;
+	
+}
+.firstLeft .pic button.leftbtn {
+	border-radius:0 30px 30px 0;
+	left:0;
+}
+.firstLeft .pic button.rightbtn {
+	border-radius:30px 0 0 30px;
+	right:0;
+}
+.firstLeft .pic:hover button{
+	display:block;
+}
+/*圆点*/
+.firstLeft .pic .circle{
+	height:13px;
+	width:70px;
+	background-color:rgba(255,255,255,0.3);
+    border-radius:10px;
+	padding:3px 0;
+	font-size:0;
+
+	position:absolute;
+	bottom:15px;
+	left:50%;
+	  
+}
+.firstLeft .circle span{
+	display:inline-block;
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	background-color:#fff;
+	margin:0 3px;
+	cursor:pointer;
+}
+.firstLeft .circle span.active{
+	background-color:#ff5000;
+}
+.firstLeft .ad{
+	width:160px;
+}
+.firstLeft .ad img{
+	width:160px;
+}
+.firstLeft .img1Box .adv{
+	width:160px;
+	height:280px;
+}
+
+
+.firstLeft .img2Box{
+	width:700px;
+	height:220px;
+	margin-top:10px;
+}
+.firstLeft .img2Box .pic{
+	width:520px;
+	height:220px;
+	position:relative;	
+}
+.firstLeft .img2Box .pictitle{
+	height:20px;
+}
+.firstLeft .img2Box .pictitle .text{
+	height:17px;
+	line-height:17px;
+}
+.firstLeft .img2Box .pictitle .text .bg{
+	background-image:url(../imges/) no-repeat left;
+	padding-left:136px;
+	color:#666;
+}
+.firstLeft .img2Box .pictitle .text i{
+	color:#ff1648;
+}
+.firstLeft .img2Box .line{
+	height:3px;
+	width:520px;
+	background-color:#ff1648;
+	position:relative;
+}
+.firstLeft .img2Box .line span{
+	height:3px;
+	width:87px;
+	background-color:#000;
+	position:absolute;
+	left:0;
+}
+.firstLeft .img2Box .img{
+ 	width:520px;
+	height:200px;
+	background-color:#fff;
+	position:relative;
+	/*确保按钮的位置*/
+    /*图片垂直居中
+	1. display:table-cell;
+	   vertical-align:middle;
+	2.弹性盒模型flex;
+	display:flex;
+	水平方向和左右边的元素盒子距离一致：justify-content:space-around;
+	垂直方向和上下边的元素盒子距离一致：align-items:center;
+	兼容ie10+
+	*/
+	 display:table-cell;
+	 vertical-align:middle;
+}
+.firstLeft .img2Box .img img{
+/**/
+margin:0 4px;
+}
+.firstLeft .img2Box .ad .title{
+/**/
+position:relative;
+top:-10px;
+}
+.firstLeft .img2Box .ad img{
+/**/
+position:relative;
+top:-21px;
+}
+/*首屏右边内容*/
+.firstRight{
+	width:280px;
+	margin-top:5px;
+}
+.firstRight .user{
+	width:280px;
+	height:155px;
+	background-color:#fff;
+	padding-top:5px;
+}
+.firstRight .user .userpic{
+	display:block;
+	width:50px;
+	height:50px;
+	border-radius:50%;
+	background-color:pink;
+	border-radius:50%;
+	margin:0 auto;
+	/*加该句之前头像的边框是正方形的*/
+	overflow:hidden;
+}
+.firstRight .user .username{
+	line-height:16px;
+	text-align:center;
+}
+.firstRight .user .members{
+	text-align:center;
+	font-size:0px;
+	
+	/*两个a元素之间有空隙先将它们转化为0
+	在給a标签赋值显示就不存在空格了
+	
+	*/
+} 
+.firstRight .user .members a{
+	/*转化为块级元素*/
+	display:inline-block;
+	font-size:12px;
+	border-radius:9px;
+	padding:0 10px 0 20px;
+	margin:0 2px;
+	background:#ffe4dc;
+	color:#FF5000;
+} 
+.firstRight .user .members a{
+	/*设置一个背景 在一个icon集合的图片中找到需要的icon*/
+	background:#ffe4dc url(../images/ico.png) 0 -528px no-repeat;
+} 
+.firstRight .user .btn{
+	text-align:center;
+}
+.firstRight .user .btn button{
+	width:75px;
+	height:25px;
+	line-height:25px;
+	margin:12px 2px 0 2px;
+	color:#fff;
+	font-weight:bold;
+	border-radius:4px;
+	
+	border:none;
+	background-image:linear-gradient(to right,#ff9000,#ff5000);
+} 
+.firstRight .user .btn button.login{
+	width:92px;
+}
+
+/*举报*/
+.firstRight .tipoff{
+	display:block;
+	text-align:center;
+	background-color:#FFE4DD;
+	color:#FF5000;
+	line-height:14px;
+}
+.firstRight i{
+	font-size:12px;
+	position:relative;
+	left:30px;
+}
+/*公告区*/
+.firstRight .notice{
+	height:108px;
+	background-color:#fff;
+
+}
+.firstRight .notice .title{
+	text-align:center;
+	font-size:0;/*去li的边距*/
+	padding-top:10px;
+}
+.firstRight .notice .title li{
+	 display:inline-block;
+	 font-size:12px;
+	 line-height:20px;
+	 padding:0 4px;
+	 margin:0 10px;
+}
+.firstRight .notice .title li.active{
+	font-weight:bold;
+	border-bottom:2px solid #f40;
+}
+.firstRight .notice .title li a:hover{
+	color:#f40;
+}
+.firstRight .notice .content{
+	 margin:0 12px;
+	
+}
+.firstRight .notice .content{
+	 margin:0 12px;
+	 padding-top:10px;
+}
+.firstRight .notice .content li{
+	float:left;
+	height:25px;
+	line-height:25px;
+	width:120px;
+	/*li标签里的元素太长时需要用这个来影藏多余的部分*/
+	overflow:hidden;
+	margin-right:5px;
+}
+.firstRight .notice .content li a:hover,.firstRight .notice .content li.item1 a{
+	color:#ff5000;
+}
+/*
+当li标签里的文字过多时用width=100%来调节
+.firstRight .notice .content li.item1{
+	width:100%;
+}*/
+/*图标区域*/
+
+.firstRight .funcbox{
+	width:100%;
+	height:150px;
+	background-color:#fff;
+	margin-top:-10px;
+	table-layout:fixed;
+	/*定义列宽的算法，根据表格的宽度计算表格的宽度，均分 内容均分或者父类均分*/
+}
+.firstRight .funcbox td{
+	border:1px solid #f4f4f4;
+	text-align:center;	
+}
+.firstRight .funcbox td span{
+	display:block;
+	width:24px;
+	height:24px;
+	margin:0 auto;
+	background:url(../images/iconbg.png) no-repeat;
+}
+.firstRight .funcbox td i{
+	line-height:34px;
+	color:#333;	
+	position:relative;
+	left:5px;
+}
+.firstRight .funcbox .item1 span{
+	background-position:0 0;
+}
+.firstRight .funcbox .item2 span{
+	background-position:0 -87px;
+}
+.firstRight .funcbox .item3 span{
+	background-position:0 -44px;
+}
+.firstRight .funcbox .item4 span{
+	background-position:0 -132px;
+}
+.firstRight .funcbox .item5 span{
+	background-position:0 -176px;
+}
+.firstRight .funcbox .item6 span{
+	background-position:0 -220px;
+}
+.firstRight .funcbox .item7 span{
+	background-position:0 -264px;
+}
+.firstRight .funcbox .item8 span{
+	background-position:0 -308px;
+}
+
+/*APP*/
+.firstRight .app{
+	height:90px;
+	background-color:#fff;
+	margin-top:-15px;
+}
+.firstRight .app .title h3{
+	line-height:30px;
+	height:30px;
+	font-size:12px;
+	padding-left:14px;
+	
+}
+.firstRight .app .title span{
+		font-size:10px;
+}
+.firstRight .app .title a:hover{
+		color:#f40;
+}
+.firstRight .applist{
+    margin-top:-10px;
+}
+.firstRight .applist ul{
+    text-align:center;
+	font-size:0;
+}
+.firstRight .applist li{
+	    width:32px;
+        height:32px;
+        display:inline-block;
+		margin:0 10px 8px 10px;
+}
+.firstRight .applist li img{
+        width:32px;
+        height:32px;
+}
+.menubox{
+		background-color:#fff;
+		margin-top:-50px;
+}
+.menubox ul{
+	width:1190px;
+    height:92px;
+	margin-top:-42px;
+	padding:0 3px;
+
+}
+.menubox li{
+    width:230px;
+    height:92px;
+    float:left;
+    margin-right:8px;	
+}
+.menubox li img{
+	width:230px;
+}
+/*第二屏*/
+.secondScreen{
+   margin-top:-24px;
+   background-color:#fff;
+}
+/*有好货*/
+.secondScreen .goods{
+     width:590px;
+	 height:638px;
+
+}
+.secondScreen .goods-head h3{
+	width:590px;
+	 height:24px;
+	 padding:0 0 0 21px;
+}
+.secondScreen .goods h3 img{
+	width:74px;
+	 height:24px;
+}
+.secondScreen .goods-head  h3 span{
+	color:#CCCCCC;	
+}
+
+.secondScreen .goods-head  ul{
+	 width:590px;
+	 height:594px;
+	 padding:0 0 0 21px;
+}
+.secondScreen .goods ul li{
+	float:left;
+	margin-right:10px;
+}
+.secondScreen .goods ul li .info, .lshop .good-info ul li .info{
+	 width:170px;
+	 height:91px;
+	 padding:0 4px 0 6px;
+}
+.secondScreen .good-info ul li img{
+	 width:180px;
+	 height:180px;
+}
+.secondScreen .good-info ul li span{
+	 color:#35B1FF;
+}
+
+/*爱逛街*/
+.secondScreen .lshop{
+     width:590px;
+	 height:638px;
+}
+.secondScreen .lshop h3 img{
+	width:56px;
+	height:23px;
+	margin-left:5px;
+}
+.secondScreen .lshop .goods-head .more{
+	 position:relative;
+	 left:-30px;
+}
+.secondScreen .lshop .goods-head i{
+	 font-size:12px;
+}
+.secondScreen .lshop .good-info .userpic a{
+	display:block;
+	width:22px;
+	height:22px;
+	border-radius:50%;
+	
+}	
+.secondScreen .lshop .good-info .userpic img{
+	width:22px;
+	height:22px;
+	border-radius:50%;	
+}	
+.secondScreen .lshop .good-info li p span.dy{
+	 font-size:14px;
+	 color:#EBEBEB;
+}	
+.secondScreen .lshop .good-info li p span.name{
+	 font-size:14px;
+	 color:#EBEBEB;
+}	
+.secondScreen .lshop .good-info li p.subtitle{
+	margin-top:11px;
+}
+.secondScreen .lshop ul li{
+	float:left;
+	margin-right:10px;
+}
+.toolsbox{
+	width:50px;
+	height:350px;
+	border:1px solid pink;	
+	position:fixed;
+	top:1200px;
+	
+    
+	
+}
+
+.toolsbox a{
+    display:block;
+	width:50px;
+	height:50px;
+	font-size:15px;
+	padding:5px 5px 5px 5px;
+	box-sizing:border-box;
+	text-align:center;
+	color:#FF4400;
+	
+	
+}
+.toolsbox a.item1{
+	color:#fff;
+	font-weight:bold;
+	background-color:#FF4400;
+	border-radius:10px 10px 0 0;
+}
+.toolsbox a.item3{
+	color:#8D7AFB;
+}
+.toolsbox a.item4{
+	color:#A8C001;
+}
+.toolsbox a.item6{
+	border-radius:0 0 10px 10px ;
+}
+.toolsbox a:hover{
+	color:#fff;
+	font-weight:bold;
+	background-image:	linear-gradient(135deg,#ff971b,#ff5000);
+
+}
