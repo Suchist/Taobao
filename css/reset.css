@@ -1,0 +1,84 @@
+/*重置会用到的标签原有的样式*/
+
+body,p,h1,h2,h3,h4{
+margin：0;
+}
+ul{
+	margin：0;
+	padding:0;
+	list-style:none;
+	/*将ul列表前的点去掉*/
+}
+img{
+	 border:none;
+	 /*在ie浏览器中会用到，但是其他浏览器里没有*/
+	 vertical-align：middle;
+	 /*引入图片时底部会有一个空白缝隙，可以去除缝隙*/
+}
+a{
+	text-decoration:none;
+	color：#3c3c3c;
+}
+i{
+	font-style:normal;
+	/*设置i斜体字为普通样式*/
+}
+input,button{
+margin：0;
+padding：0;
+}
+button{
+	outline:none;
+}
+/*
+设置行高的时候可以设置为：1.5/200%/50px/5em得出的结果*font-size
+就是文字占用的空间大小，一般设置为第一种，因为第一种的占用空间能够
+实现子类重写，其它不行
+*/
+body{
+	font:12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+	/*字体大小                               font-family:"宋体"=SimSun，*/
+	color:#3c3c3c;
+	background-color:#f4f4f4;
+}
+.clearfix:after{
+	 content:'';
+	 display:block;
+	 clear:both; 
+}
+.fl{
+	float:left;
+}																																                                 
+.fr{
+	float:right;
+}
+/*把一些常用的样式定义成类*/
+.leayer{
+	width:1190px;
+	margin:0 auto;
+}
+.c4{
+	color:#f40;
+}
+.c5{
+	color:#f50;
+}
+.mt10{
+	margin-top:10px;
+}
+.mr10{
+	margin-right:10px;
+}
+.mr7{
+	margin-right:7px;
+}
+.mr5{
+ margin-right:5px;
+}
+.ml5{
+ margin-left:10px;
+}
+.subtitle{
+	font-size:13.3px;
+	color:#999999;
+}
