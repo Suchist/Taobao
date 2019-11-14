@@ -761,107 +761,140 @@ top:-21px;
 .menubox li img{
 	width:230px;
 }
-/*第二屏*/
-.secondScreen{
-   margin-top:-24px;
-   background-color:#fff;
-}
+
 /*有好货*/
-.secondScreen .goods{
+.goods{
      width:590px;
-	 height:638px;
+	 height:658px;
+	 background-color:#fff;
+	 margin-top:8px;
+}
+.goods .head{
+	 margin-top:8px;
+	 height:24px;
+	 line-height:24px;
+	 padding:0 20px;
+}
+.goods .head h3{
+	font-size:0;
+	font-weight:normal;
+	/*去h3加粗*/
+}
+.goods .head h3 img{
+	height:24px;
+}
+.goods .head  h3 span{
+	/*行内集元素居中对齐 vertical-align:middle没有用*/
+	color:#CCCCCC;
+    font-size:	20px;
+	margin-left:0 5px;
+}
+.goods .head  h3 i{
+	font-size:12px;
+	color:#CCCCCC;
+   
 
 }
-.secondScreen .goods-head h3{
-	width:590px;
-	 height:24px;
-	 padding:0 0 0 21px;
+.goods .head  h3 .change{
+	color:#999;
 }
-.secondScreen .goods h3 img{
-	width:74px;
-	 height:24px;
+/*ul inline-block 回车换行符解析为空格*/
+.goods .list{
+	 text-align:center; 
 }
-.secondScreen .goods-head  h3 span{
-	color:#CCCCCC;	
+.goods .list li{
+	width:180px;
+	display:inline-block;	
+	margin:0 2px 10px 2px;
+	text-align:left;
 }
-
-.secondScreen .goods-head  ul{
-	 width:590px;
-	 height:594px;
-	 padding:0 0 0 21px;
-}
-.secondScreen .goods ul li{
-	float:left;
-	margin-right:10px;
-}
-.secondScreen .goods ul li .info, .lshop .good-info ul li .info{
-	 width:170px;
-	 height:91px;
-	 padding:0 4px 0 6px;
-}
-.secondScreen .good-info ul li img{
+.goods .list li img{
 	 width:180px;
 	 height:180px;
 }
-.secondScreen .good-info ul li span{
-	 color:#35B1FF;
+.goods .list li h4{
+	font-size:16px;
+	height:10px;
+	color:black;
+	line-height:10px;
+	font-weight:normal;
+}
+.goods .list li h4 a:hover{
+	color:#f40;
+}
+.goods .list li .text{
+	height:16px;
+	line-height:16px;
+	font-size:14px;
+	overflow:hidden;
+	margin-top:-15px;
+	/*后台数据太长的话可以用overflow：hidden来影藏多余数据*/
+}
+.goods .list li .text a{
+	color:#999;	
+}
+/**/
+.goods .list li .extra{
+	display:block;
+	height:15px;
+	line-height:15px;
+	font-size:12px;
+	color:#35b1ff;
+	margin-top:12px;
+}
+.goods .list li .extra span{
+	font-size:12px;
+	color:#35b1ff;
+	margin-top:12px;
 }
 
 /*爱逛街*/
-.secondScreen .lshop{
-     width:590px;
-	 height:638px;
+.shopping .list li .text{    
+    height:44px;
+	line-height:22px;
+	font-size:14px;
+	overflow:hidden;
+	margin-top:11px;	
 }
-.secondScreen .lshop h3 img{
-	width:56px;
-	height:23px;
-	margin-left:5px;
+.shopping .list li .text span{
+	font-size:14px;
+	color:#EBEBEB;	
+	position:relative;
+	top:-5px;
 }
-.secondScreen .lshop .goods-head .more{
-	 position:relative;
-	 left:-30px;
+.shopping .list li .text a:hover{
+color:#f40;
 }
-.secondScreen .lshop .goods-head i{
-	 font-size:12px;
-}
-.secondScreen .lshop .good-info .userpic a{
-	display:block;
+.shopping .list li .extra img{
 	width:22px;
 	height:22px;
 	border-radius:50%;
-	
-}	
-.secondScreen .lshop .good-info .userpic img{
-	width:22px;
-	height:22px;
-	border-radius:50%;	
-}	
-.secondScreen .lshop .good-info li p span.dy{
-	 font-size:14px;
-	 color:#EBEBEB;
-}	
-.secondScreen .lshop .good-info li p span.name{
-	 font-size:14px;
-	 color:#EBEBEB;
-}	
-.secondScreen .lshop .good-info li p.subtitle{
-	margin-top:11px;
 }
-.secondScreen .lshop ul li{
-	float:left;
-	margin-right:10px;
+.shopping .list li .extra {
+	color:#999;
+}
+.shopping .list li .extra {
+	margin-bottom:10px;
+	position:relative;
+	top:-20px;
+	
 }
 .toolsbox{
 	width:50px;
 	height:350px;
-	border:1px solid pink;	
 	position:fixed;
-	top:1200px;
-	
-    
+	top:100px;
+	right:25px;
+	background-color:#fff;
+	border-radius:10px;	
+}
+.toolsbox span{
+	font-size:32px;
+	color:#ff7f13;
+	width:50px;
+	height:36px;
 	
 }
-
 .toolsbox a{
     display:block;
 	width:50px;
@@ -870,9 +903,22 @@ top:-21px;
 	padding:5px 5px 5px 5px;
 	box-sizing:border-box;
 	text-align:center;
+		/*
+		word-break:keep-all; 文字换行
+		padding-top:6px;
+		text-align:center;	
+		*/
 	color:#FF4400;
-	
-	
+	position:relative;
+}
+/*a的下边框*/
+.toolsbox a:after{
+	content:" ";
+	border-bottom:1px solid #efefef;
+	width:34px;
+	position:absolute;
+	left:8px;
+    bottom:0;
 }
 .toolsbox a.item1{
 	color:#fff;
@@ -886,12 +932,20 @@ top:-21px;
 .toolsbox a.item4{
 	color:#A8C001;
 }
+
+
+/*反馈居中*/
+.toolsbox a.item5{
+	line-height:40px;
+}
 .toolsbox a.item6{
 	border-radius:0 0 10px 10px ;
 }
-.toolsbox a:hover{
+.toolsbox a:hover,.toolsbox a.active{
 	color:#fff;
 	font-weight:bold;
 	background-image:	linear-gradient(135deg,#ff971b,#ff5000);
-
+}
+.toolsbox a:hover:after,.toolsbox a.active:after{
+	border:none;
 }
